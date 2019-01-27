@@ -52,10 +52,10 @@ class BaseAction:
 
     # 获取截图
     def get_screen(self):
-        png_name = './screen/{}.png'.format(time.strftime('%Y%m%d%H%M%S'))
+#         png_name = './screen/{}.png'.format(time.strftime('%Y%m%d%H%M%S'))
+#         self.driver.get_screenshot_as_file(png_name)
+        png_name = "./screen/{}.png".format(int(time.time()))
         self.driver.get_screenshot_as_file(png_name)
-        # png_name = "./screen/{}.png".format(int(time.time()))
-        # self.driver.get_screenshot_as_file(png_name)
         # rb 以二进制的方式读取数据
         with open(png_name, 'rb') as f:
             allure.attach('截图名字', f.read(), allure.attach_type.PNG)
