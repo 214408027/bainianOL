@@ -10,10 +10,10 @@ test_login_02:
   tag: 1
 
 
-#test_login_03:
-#  username: 13488834010
-#  password: 159357li
-#  tag: 1
+test_login_03:
+  username: 13488834010
+  password: 159357li
+  tag: 1
 
 
 #test_login_04:
