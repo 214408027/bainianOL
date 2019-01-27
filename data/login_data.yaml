@@ -2,7 +2,7 @@ test_login_01:
   username: 13488834010
   password: 159357li8888
   tag: 0
-  expect_data: 登录密码错误
+  expect_data: 登录密码错误1
 
 test_login_02:
   username: ' 13488834010'
@@ -10,10 +10,10 @@ test_login_02:
   tag: 1
 
 
-test_login_03:
-  username: 13488834010
-  password: 159357li
-  tag: 1
+# test_login_03:
+#   username: 13488834010
+#   password: 159357li
+#   tag: 1
 
 
 #test_login_04:
