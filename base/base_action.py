@@ -1,8 +1,7 @@
 import time
 
 #包含公共的操作 ：查找元素，点击元素，输入内容...
-from selenium.webdriver.support.wait import WebDriverWait
-
+import allure
 
 class BaseAction:
     def __init__(self, driver):
@@ -52,10 +51,8 @@ class BaseAction:
 
     # 获取截图
     def get_screen(self):
-#         png_name = './screen/{}.png'.format(time.strftime('%Y%m%d%H%M%S'))
-#         self.driver.get_screenshot_as_file(png_name)
-        png_name = "./screen/{}.png".format(int(time.time()))
+        png_name = './screen/{}.png'.format(time.strftime('%Y%m%d%H%M%S'))
         self.driver.get_screenshot_as_file(png_name)
-        # rb 以二进制的方式读取数据
-        with open(png_name, 'rb') as f:
+    #
+        with open(png_name, 'rb',encoding="utf-8") as f:
             allure.attach('截图名字', f.read(), allure.attach_type.PNG)
