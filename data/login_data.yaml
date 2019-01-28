@@ -4,10 +4,10 @@ test_login_01:
   tag: 0
   expect_data: 登录密码错误1
 
-# test_login_02:
-#   username: ' 13488834010'
-#   password: 159357li
-#   tag: 1
+test_login_02:
+  username: ' 13488834010'
+  password: 159357li
+  tag: 1
 
 
 # test_login_03:
