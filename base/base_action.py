@@ -51,7 +51,7 @@ class BaseAction:
 
     # 获取截图
     def get_screen(self):
-        png_name = './screen/{}.png'.format(time.strftime('%Y%m%d%H%M%S'))
+        png_name = "./screen/{}.png".format(int(time.time()))
         self.driver.get_screenshot_as_file(png_name)
         with open(png_name, 'rb') as f:
             allure.attach('截图名字', f.read(), allure.attach_type.PNG)
