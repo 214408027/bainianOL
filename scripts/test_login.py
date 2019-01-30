@@ -79,5 +79,6 @@ class TestLogin:
             toast_msg = self.navigation_page.get_login_page_obj().find_element(page.pwd_error_toast).text
             time.sleep(2)
             print(toast_msg)
-            assert toast_msg == expect_data, self.navigation_page.get_setting_obj().get_screen()
             self.navigation_page.get_login_page_obj().click_close_login_page()
+            assert toast_msg == expect_data, self.navigation_page.get_setting_obj().get_screen()
+
